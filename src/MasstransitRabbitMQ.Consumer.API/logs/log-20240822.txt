@@ -1,0 +1,194 @@
+2024-08-22 00:43:49.079 +07:00 [INF] Configured endpoint email-notification-event, Consumer: MasstransitRabbitMQ.Consumer.API.MessageBus.Consumers.Events.EmailNotificationEventConsumer
+2024-08-22 00:43:49.118 +07:00 [INF] Configured endpoint sms-notification-event, Consumer: MasstransitRabbitMQ.Consumer.API.MessageBus.Consumers.Events.SmsNotificationEventConsumer
+2024-08-22 00:43:49.192 +07:00 [DBG] Starting bus instances: IBus
+2024-08-22 00:43:49.194 +07:00 [DBG] Starting bus: "rabbitmq://localhost/sieupham"
+2024-08-22 00:43:49.215 +07:00 [DBG] Connect: guest@localhost:5672/sieupham
+2024-08-22 00:43:49.390 +07:00 [DBG] Connected: guest@localhost:5672/sieupham (address: amqp://localhost:5672, local: 51910)
+2024-08-22 00:43:49.408 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/192_MasstransitRabbitMQConsumerAPI_bus_ce9yyyyejqbpj6anbdqcrngonx?temporary=true"
+2024-08-22 00:43:49.455 +07:00 [DBG] Declare queue: name: sms-notification-event, durable, consumer-count: 0 message-count: 0
+2024-08-22 00:43:49.455 +07:00 [DBG] Declare queue: name: email-notification-event, durable, consumer-count: 0 message-count: 0
+2024-08-22 00:43:49.469 +07:00 [DBG] Declare exchange: name: email-notification-event, type: fanout, durable
+2024-08-22 00:43:49.469 +07:00 [DBG] Declare exchange: name: sms-notification-event, type: fanout, durable
+2024-08-22 00:43:49.482 +07:00 [DBG] Bind queue: source: email-notification-event, destination: email-notification-event
+2024-08-22 00:43:49.482 +07:00 [DBG] Bind queue: source: sms-notification-event, destination: sms-notification-event
+2024-08-22 00:43:49.509 +07:00 [DBG] Bind exchange: source: sms-notification-event, destination: sms-notification-event
+2024-08-22 00:43:49.509 +07:00 [DBG] Bind exchange: source: email-notification-event, destination: email-notification-event
+2024-08-22 00:43:49.594 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/sieupham/email-notification-event" - amq.ctag-vrVYIsqY-ADe7e8YcZX3wQ
+2024-08-22 00:43:49.594 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/sieupham/sms-notification-event" - amq.ctag-q0zpn_VlLLvBN0iPW7EH_w
+2024-08-22 00:43:49.595 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/email-notification-event"
+2024-08-22 00:43:49.595 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/sms-notification-event"
+2024-08-22 00:43:49.597 +07:00 [INF] Bus started: "rabbitmq://localhost/sieupham"
+2024-08-22 00:45:28.476 +07:00 [DBG] Consumer Canceled: "rabbitmq://localhost/sieupham/email-notification-event" - amq.ctag-vrVYIsqY-ADe7e8YcZX3wQ
+2024-08-22 00:45:28.482 +07:00 [DBG] Consumer Stopping: "rabbitmq://localhost/sieupham/email-notification-event" (Consume Loop Exited)
+2024-08-22 00:45:28.490 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/email-notification-event"
+2024-08-22 00:45:28.501 +07:00 [DBG] Consumer Completed: "rabbitmq://localhost/sieupham/email-notification-event": 0 received, 0 concurrent, amq.ctag-vrVYIsqY-ADe7e8YcZX3wQ
+2024-08-22 00:45:29.523 +07:00 [DBG] Declare queue: name: email-notification-event, durable, consumer-count: 0 message-count: 0
+2024-08-22 00:45:29.545 +07:00 [DBG] Declare exchange: name: email-notification-event, type: fanout, durable
+2024-08-22 00:45:29.566 +07:00 [DBG] Bind queue: source: email-notification-event, destination: email-notification-event
+2024-08-22 00:45:29.604 +07:00 [DBG] Bind exchange: source: email-notification-event, destination: email-notification-event
+2024-08-22 00:45:29.640 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/sieupham/email-notification-event" - amq.ctag-vrVYIsqY-ADe7e8YcZX3wQ
+2024-08-22 00:45:29.640 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/email-notification-event"
+2024-08-22 00:45:31.227 +07:00 [DBG] Consumer Canceled: "rabbitmq://localhost/sieupham/sms-notification-event" - amq.ctag-q0zpn_VlLLvBN0iPW7EH_w
+2024-08-22 00:45:31.227 +07:00 [DBG] Consumer Stopping: "rabbitmq://localhost/sieupham/sms-notification-event" (Consume Loop Exited)
+2024-08-22 00:45:31.228 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/sms-notification-event"
+2024-08-22 00:45:31.229 +07:00 [DBG] Consumer Completed: "rabbitmq://localhost/sieupham/sms-notification-event": 0 received, 0 concurrent, amq.ctag-q0zpn_VlLLvBN0iPW7EH_w
+2024-08-22 00:45:32.263 +07:00 [DBG] Declare queue: name: sms-notification-event, durable, consumer-count: 0 message-count: 0
+2024-08-22 00:45:32.274 +07:00 [DBG] Declare exchange: name: sms-notification-event, type: fanout, durable
+2024-08-22 00:45:32.285 +07:00 [DBG] Bind queue: source: sms-notification-event, destination: sms-notification-event
+2024-08-22 00:45:32.304 +07:00 [DBG] Bind exchange: source: sms-notification-event, destination: sms-notification-event
+2024-08-22 00:45:32.359 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/sieupham/sms-notification-event" - amq.ctag-q0zpn_VlLLvBN0iPW7EH_w
+2024-08-22 00:45:32.359 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/sms-notification-event"
+2024-08-22 00:45:39.193 +07:00 [DBG] Consumer Canceled: "rabbitmq://localhost/sieupham/email-notification-event" - amq.ctag-vrVYIsqY-ADe7e8YcZX3wQ
+2024-08-22 00:45:39.194 +07:00 [DBG] Consumer Stopping: "rabbitmq://localhost/sieupham/email-notification-event" (Consume Loop Exited)
+2024-08-22 00:45:39.194 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/email-notification-event"
+2024-08-22 00:45:39.194 +07:00 [DBG] Consumer Completed: "rabbitmq://localhost/sieupham/email-notification-event": 0 received, 0 concurrent, amq.ctag-vrVYIsqY-ADe7e8YcZX3wQ
+2024-08-22 00:45:40.212 +07:00 [DBG] Declare queue: name: email-notification-event, durable, consumer-count: 0 message-count: 0
+2024-08-22 00:45:40.224 +07:00 [DBG] Declare exchange: name: email-notification-event, type: fanout, durable
+2024-08-22 00:45:40.231 +07:00 [DBG] Bind queue: source: email-notification-event, destination: email-notification-event
+2024-08-22 00:45:40.250 +07:00 [DBG] Bind exchange: source: email-notification-event, destination: email-notification-event
+2024-08-22 00:45:40.269 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/sieupham/email-notification-event" - amq.ctag-vrVYIsqY-ADe7e8YcZX3wQ
+2024-08-22 00:45:40.270 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/email-notification-event"
+2024-08-22 00:45:42.103 +07:00 [DBG] Consumer Canceled: "rabbitmq://localhost/sieupham/sms-notification-event" - amq.ctag-q0zpn_VlLLvBN0iPW7EH_w
+2024-08-22 00:45:42.104 +07:00 [DBG] Consumer Stopping: "rabbitmq://localhost/sieupham/sms-notification-event" (Consume Loop Exited)
+2024-08-22 00:45:42.104 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/sms-notification-event"
+2024-08-22 00:45:42.104 +07:00 [DBG] Consumer Completed: "rabbitmq://localhost/sieupham/sms-notification-event": 0 received, 0 concurrent, amq.ctag-q0zpn_VlLLvBN0iPW7EH_w
+2024-08-22 00:45:43.135 +07:00 [DBG] Declare queue: name: sms-notification-event, durable, consumer-count: 0 message-count: 0
+2024-08-22 00:45:43.147 +07:00 [DBG] Declare exchange: name: sms-notification-event, type: fanout, durable
+2024-08-22 00:45:43.151 +07:00 [DBG] Bind queue: source: sms-notification-event, destination: sms-notification-event
+2024-08-22 00:45:43.165 +07:00 [DBG] Bind exchange: source: sms-notification-event, destination: sms-notification-event
+2024-08-22 00:45:43.194 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/sieupham/sms-notification-event" - amq.ctag-q0zpn_VlLLvBN0iPW7EH_w
+2024-08-22 00:45:43.195 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/sms-notification-event"
+2024-08-22 00:45:47.616 +07:00 [DBG] Consumer Canceled: "rabbitmq://localhost/sieupham/email-notification-event" - amq.ctag-vrVYIsqY-ADe7e8YcZX3wQ
+2024-08-22 00:45:47.616 +07:00 [DBG] Consumer Stopping: "rabbitmq://localhost/sieupham/email-notification-event" (Consume Loop Exited)
+2024-08-22 00:45:47.616 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/email-notification-event"
+2024-08-22 00:45:47.616 +07:00 [DBG] Consumer Completed: "rabbitmq://localhost/sieupham/email-notification-event": 0 received, 0 concurrent, amq.ctag-vrVYIsqY-ADe7e8YcZX3wQ
+2024-08-22 00:45:48.645 +07:00 [DBG] Declare queue: name: email-notification-event, durable, consumer-count: 0 message-count: 0
+2024-08-22 00:45:48.657 +07:00 [DBG] Declare exchange: name: email-notification-event, type: fanout, durable
+2024-08-22 00:45:48.659 +07:00 [DBG] Bind queue: source: email-notification-event, destination: email-notification-event
+2024-08-22 00:45:48.684 +07:00 [DBG] Bind exchange: source: email-notification-event, destination: email-notification-event
+2024-08-22 00:45:48.721 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/sieupham/email-notification-event" - amq.ctag-vrVYIsqY-ADe7e8YcZX3wQ
+2024-08-22 00:45:48.721 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/email-notification-event"
+2024-08-22 00:46:04.559 +07:00 [INF] Message Received: SmsNotificationEvent { Id = 6cf1fe5b-da70-4a48-8ca2-938515bfb4da, TimeStamp = 1/1/0001 12:00:00 AM +00:00, Name = sms notification, Description = Sms description, Type = sms, TransactionId = 22fce4c0-2708-493a-82f6-c296f6fe85e2 }
+2024-08-22 00:46:04.565 +07:00 [DBG] RECEIVE "rabbitmq://localhost/sieupham/sms-notification-event" "4a3e0000-084b-82d4-97cc-08dcc20920fc" MasstransitRabbitMQ.Contract.Abstractions.IntegrationEvents.DomainEvent+SmsNotificationEvent MasstransitRabbitMQ.Consumer.API.MessageBus.Consumers.Events.SmsNotificationEventConsumer("00:00:00.0121062")
+2024-08-22 00:46:08.397 +07:00 [INF] Message Received: EmailNotificationEvent { Id = 06b51ba7-516b-4cc8-86ae-7753d1c55791, TimeStamp = 1/1/0001 12:00:00 AM +00:00, Name = Email notification, Description = Email description, Type = email, TransactionId = 331bed4e-bfda-4add-991d-a586784f7ae6 }
+2024-08-22 00:46:08.397 +07:00 [DBG] RECEIVE "rabbitmq://localhost/sieupham/email-notification-event" "4a3e0000-084b-82d4-88a0-08dcc209235d" MasstransitRabbitMQ.Contract.Abstractions.IntegrationEvents.DomainEvent+EmailNotificationEvent MasstransitRabbitMQ.Consumer.API.MessageBus.Consumers.Events.EmailNotificationEventConsumer("00:00:00.0033557")
+2024-08-22 00:46:09.590 +07:00 [INF] Message Received: EmailNotificationEvent { Id = b705e5ec-457b-43e1-9dc3-41ca9c6c1de3, TimeStamp = 1/1/0001 12:00:00 AM +00:00, Name = Email notification, Description = Email description, Type = email, TransactionId = d49ce8dd-fd24-447b-9882-e2b489b4dd2f }
+2024-08-22 00:46:09.590 +07:00 [DBG] RECEIVE "rabbitmq://localhost/sieupham/email-notification-event" "4a3e0000-084b-82d4-a144-08dcc2092418" MasstransitRabbitMQ.Contract.Abstractions.IntegrationEvents.DomainEvent+EmailNotificationEvent MasstransitRabbitMQ.Consumer.API.MessageBus.Consumers.Events.EmailNotificationEventConsumer("00:00:00.0029263")
+2024-08-22 00:52:29.944 +07:00 [DBG] Stopping bus instances: IBus
+2024-08-22 00:52:29.948 +07:00 [DBG] Stopping bus: "rabbitmq://localhost/sieupham"
+2024-08-22 00:52:29.952 +07:00 [DBG] Endpoint Stopping: "rabbitmq://localhost/sieupham/email-notification-event"
+2024-08-22 00:52:29.956 +07:00 [DBG] Consumer Stopping: "rabbitmq://localhost/sieupham/email-notification-event" (Stop Receive Transport)
+2024-08-22 00:52:29.971 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/email-notification-event"
+2024-08-22 00:52:29.971 +07:00 [DBG] Consumer Completed: "rabbitmq://localhost/sieupham/email-notification-event": 2 received, 1 concurrent, amq.ctag-vrVYIsqY-ADe7e8YcZX3wQ
+2024-08-22 00:52:29.971 +07:00 [DBG] Consumer Cancel Ok: "rabbitmq://localhost/sieupham/email-notification-event" - amq.ctag-vrVYIsqY-ADe7e8YcZX3wQ
+2024-08-22 00:52:29.977 +07:00 [DBG] Endpoint Stopping: "rabbitmq://localhost/sieupham/sms-notification-event"
+2024-08-22 00:52:29.978 +07:00 [DBG] Consumer Stopping: "rabbitmq://localhost/sieupham/sms-notification-event" (Stop Receive Transport)
+2024-08-22 00:52:29.980 +07:00 [DBG] Consumer Cancel Ok: "rabbitmq://localhost/sieupham/sms-notification-event" - amq.ctag-q0zpn_VlLLvBN0iPW7EH_w
+2024-08-22 00:52:29.980 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/sms-notification-event"
+2024-08-22 00:52:29.980 +07:00 [DBG] Consumer Completed: "rabbitmq://localhost/sieupham/sms-notification-event": 1 received, 1 concurrent, amq.ctag-q0zpn_VlLLvBN0iPW7EH_w
+2024-08-22 00:52:29.989 +07:00 [DBG] Endpoint Stopping: "rabbitmq://localhost/sieupham/192_MasstransitRabbitMQConsumerAPI_bus_ce9yyyyejqbpj6anbdqcrngonx?temporary=true"
+2024-08-22 00:52:29.991 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/192_MasstransitRabbitMQConsumerAPI_bus_ce9yyyyejqbpj6anbdqcrngonx?temporary=true"
+2024-08-22 00:52:29.992 +07:00 [DBG] Disconnect: guest@localhost:5672/sieupham
+2024-08-22 00:52:30.001 +07:00 [DBG] Disconnected: guest@localhost:5672/sieupham
+2024-08-22 00:52:30.002 +07:00 [INF] Bus stopped: "rabbitmq://localhost/sieupham"
+2024-08-22 00:52:30.007 +07:00 [INF] Stopped cleanly
+2024-08-22 00:58:53.586 +07:00 [INF] Configured endpoint email-notification-event, Consumer: MasstransitRabbitMQ.Consumer.API.MessageBus.Consumers.Events.EmailNotificationEventConsumer
+2024-08-22 00:58:53.628 +07:00 [INF] Configured endpoint sms-notification-event, Consumer: MasstransitRabbitMQ.Consumer.API.MessageBus.Consumers.Events.SmsNotificationEventConsumer
+2024-08-22 00:58:53.702 +07:00 [DBG] Starting bus instances: IBus
+2024-08-22 00:58:53.704 +07:00 [DBG] Starting bus: "rabbitmq://localhost/sieupham"
+2024-08-22 00:58:53.731 +07:00 [DBG] Connect: guest@localhost:5672/sieupham
+2024-08-22 00:58:53.939 +07:00 [DBG] Connected: guest@localhost:5672/sieupham (address: amqp://localhost:5672, local: 52111)
+2024-08-22 00:58:53.959 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/192_MasstransitRabbitMQConsumerAPI_bus_kbbyyyyejqbpjfo4bdqcrnzmdo?temporary=true"
+2024-08-22 00:58:53.976 +07:00 [DBG] Declare queue: name: sms-notification-event, durable, consumer-count: 0 message-count: 0
+2024-08-22 00:58:53.976 +07:00 [DBG] Declare queue: name: email-notification-event, durable, consumer-count: 0 message-count: 0
+2024-08-22 00:58:53.989 +07:00 [DBG] Declare exchange: name: email-notification-event, type: fanout, durable
+2024-08-22 00:58:53.989 +07:00 [DBG] Declare exchange: name: sms-notification-event, type: fanout, durable
+2024-08-22 00:58:53.994 +07:00 [DBG] Declare exchange: name: sms-notification, type: fanout, durable
+2024-08-22 00:58:53.994 +07:00 [DBG] Declare exchange: name: email-notification, type: fanout, durable
+2024-08-22 00:58:54.005 +07:00 [DBG] Bind queue: source: sms-notification-event, destination: sms-notification-event
+2024-08-22 00:58:54.006 +07:00 [DBG] Bind queue: source: email-notification-event, destination: email-notification-event
+2024-08-22 00:58:54.022 +07:00 [DBG] Bind exchange: source: sms-notification, destination: sms-notification-event
+2024-08-22 00:58:54.022 +07:00 [DBG] Bind exchange: source: email-notification, destination: email-notification-event
+2024-08-22 00:58:54.072 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/sieupham/email-notification-event" - amq.ctag-u1as_tNpqSWE7V2qdc-qXg
+2024-08-22 00:58:54.072 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/sieupham/sms-notification-event" - amq.ctag-tD17lCfjqEXMKF2sdVH_eQ
+2024-08-22 00:58:54.073 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/email-notification-event"
+2024-08-22 00:58:54.074 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/sms-notification-event"
+2024-08-22 00:58:54.078 +07:00 [INF] Bus started: "rabbitmq://localhost/sieupham"
+2024-08-22 00:59:17.013 +07:00 [DBG] Consumer Canceled: "rabbitmq://localhost/sieupham/email-notification-event" - amq.ctag-u1as_tNpqSWE7V2qdc-qXg
+2024-08-22 00:59:17.037 +07:00 [DBG] Consumer Stopping: "rabbitmq://localhost/sieupham/email-notification-event" (Consume Loop Exited)
+2024-08-22 00:59:17.041 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/email-notification-event"
+2024-08-22 00:59:17.046 +07:00 [DBG] Consumer Completed: "rabbitmq://localhost/sieupham/email-notification-event": 0 received, 0 concurrent, amq.ctag-u1as_tNpqSWE7V2qdc-qXg
+2024-08-22 00:59:18.076 +07:00 [DBG] Declare queue: name: email-notification-event, durable, consumer-count: 0 message-count: 0
+2024-08-22 00:59:18.087 +07:00 [DBG] Declare exchange: name: email-notification-event, type: fanout, durable
+2024-08-22 00:59:18.093 +07:00 [DBG] Declare exchange: name: email-notification, type: fanout, durable
+2024-08-22 00:59:18.097 +07:00 [DBG] Bind queue: source: email-notification-event, destination: email-notification-event
+2024-08-22 00:59:18.120 +07:00 [DBG] Bind exchange: source: email-notification, destination: email-notification-event
+2024-08-22 00:59:18.163 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/sieupham/email-notification-event" - amq.ctag-u1as_tNpqSWE7V2qdc-qXg
+2024-08-22 00:59:18.163 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/email-notification-event"
+2024-08-22 00:59:21.166 +07:00 [DBG] Consumer Canceled: "rabbitmq://localhost/sieupham/sms-notification-event" - amq.ctag-tD17lCfjqEXMKF2sdVH_eQ
+2024-08-22 00:59:21.168 +07:00 [DBG] Consumer Stopping: "rabbitmq://localhost/sieupham/sms-notification-event" (Consume Loop Exited)
+2024-08-22 00:59:21.168 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/sms-notification-event"
+2024-08-22 00:59:21.168 +07:00 [DBG] Consumer Completed: "rabbitmq://localhost/sieupham/sms-notification-event": 0 received, 0 concurrent, amq.ctag-tD17lCfjqEXMKF2sdVH_eQ
+2024-08-22 00:59:22.182 +07:00 [DBG] Declare queue: name: sms-notification-event, durable, consumer-count: 0 message-count: 0
+2024-08-22 00:59:22.192 +07:00 [DBG] Declare exchange: name: sms-notification-event, type: fanout, durable
+2024-08-22 00:59:22.203 +07:00 [DBG] Declare exchange: name: sms-notification, type: fanout, durable
+2024-08-22 00:59:22.210 +07:00 [DBG] Bind queue: source: sms-notification-event, destination: sms-notification-event
+2024-08-22 00:59:22.231 +07:00 [DBG] Bind exchange: source: sms-notification, destination: sms-notification-event
+2024-08-22 00:59:22.267 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/sieupham/sms-notification-event" - amq.ctag-tD17lCfjqEXMKF2sdVH_eQ
+2024-08-22 00:59:22.268 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/sms-notification-event"
+2024-08-22 01:00:28.904 +07:00 [DBG] Stopping bus instances: IBus
+2024-08-22 01:00:28.908 +07:00 [DBG] Stopping bus: "rabbitmq://localhost/sieupham"
+2024-08-22 01:00:28.914 +07:00 [DBG] Endpoint Stopping: "rabbitmq://localhost/sieupham/email-notification-event"
+2024-08-22 01:00:28.918 +07:00 [DBG] Consumer Stopping: "rabbitmq://localhost/sieupham/email-notification-event" (Stop Receive Transport)
+2024-08-22 01:00:28.923 +07:00 [DBG] Consumer Cancel Ok: "rabbitmq://localhost/sieupham/email-notification-event" - amq.ctag-u1as_tNpqSWE7V2qdc-qXg
+2024-08-22 01:00:28.923 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/email-notification-event"
+2024-08-22 01:00:28.925 +07:00 [DBG] Consumer Completed: "rabbitmq://localhost/sieupham/email-notification-event": 0 received, 0 concurrent, amq.ctag-u1as_tNpqSWE7V2qdc-qXg
+2024-08-22 01:00:28.926 +07:00 [DBG] Endpoint Stopping: "rabbitmq://localhost/sieupham/sms-notification-event"
+2024-08-22 01:00:28.926 +07:00 [DBG] Consumer Stopping: "rabbitmq://localhost/sieupham/sms-notification-event" (Stop Receive Transport)
+2024-08-22 01:00:28.928 +07:00 [DBG] Consumer Cancel Ok: "rabbitmq://localhost/sieupham/sms-notification-event" - amq.ctag-tD17lCfjqEXMKF2sdVH_eQ
+2024-08-22 01:00:28.928 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/sms-notification-event"
+2024-08-22 01:00:28.928 +07:00 [DBG] Consumer Completed: "rabbitmq://localhost/sieupham/sms-notification-event": 0 received, 0 concurrent, amq.ctag-tD17lCfjqEXMKF2sdVH_eQ
+2024-08-22 01:00:28.941 +07:00 [DBG] Endpoint Stopping: "rabbitmq://localhost/sieupham/192_MasstransitRabbitMQConsumerAPI_bus_kbbyyyyejqbpjfo4bdqcrnzmdo?temporary=true"
+2024-08-22 01:00:28.943 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/192_MasstransitRabbitMQConsumerAPI_bus_kbbyyyyejqbpjfo4bdqcrnzmdo?temporary=true"
+2024-08-22 01:00:28.954 +07:00 [DBG] Disconnect: guest@localhost:5672/sieupham
+2024-08-22 01:00:28.957 +07:00 [DBG] Disconnected: guest@localhost:5672/sieupham
+2024-08-22 01:00:28.957 +07:00 [INF] Bus stopped: "rabbitmq://localhost/sieupham"
+2024-08-22 01:00:28.963 +07:00 [INF] Stopped cleanly
+2024-08-22 01:00:54.370 +07:00 [INF] Configured endpoint email-notification, Consumer: MasstransitRabbitMQ.Consumer.API.MessageBus.Consumers.Events.EmailNotificationConsumer
+2024-08-22 01:00:54.421 +07:00 [INF] Configured endpoint sms-notification, Consumer: MasstransitRabbitMQ.Consumer.API.MessageBus.Consumers.Events.SmsNotificationConsumer
+2024-08-22 01:00:54.534 +07:00 [DBG] Starting bus instances: IBus
+2024-08-22 01:00:54.537 +07:00 [DBG] Starting bus: "rabbitmq://localhost/sieupham"
+2024-08-22 01:00:54.566 +07:00 [DBG] Connect: guest@localhost:5672/sieupham
+2024-08-22 01:00:54.714 +07:00 [DBG] Connected: guest@localhost:5672/sieupham (address: amqp://localhost:5672, local: 52141)
+2024-08-22 01:00:54.739 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/192_MasstransitRabbitMQConsumerAPI_bus_53byyyyejqbpexesbdqcrn3udc?temporary=true"
+2024-08-22 01:00:54.769 +07:00 [DBG] Declare queue: name: sms-notification, durable, consumer-count: 0 message-count: 0
+2024-08-22 01:00:54.769 +07:00 [DBG] Declare queue: name: email-notification, durable, consumer-count: 0 message-count: 0
+2024-08-22 01:00:54.783 +07:00 [DBG] Declare exchange: name: email-notification, type: fanout, durable
+2024-08-22 01:00:54.783 +07:00 [DBG] Declare exchange: name: sms-notification, type: fanout, durable
+2024-08-22 01:00:54.789 +07:00 [DBG] Bind queue: source: email-notification, destination: email-notification
+2024-08-22 01:00:54.789 +07:00 [DBG] Bind queue: source: sms-notification, destination: sms-notification
+2024-08-22 01:00:54.812 +07:00 [DBG] Bind exchange: source: sms-notification, destination: sms-notification
+2024-08-22 01:00:54.812 +07:00 [DBG] Bind exchange: source: email-notification, destination: email-notification
+2024-08-22 01:00:54.845 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/sieupham/sms-notification" - amq.ctag-evOLhCZ3cuXn29kSdXhnGQ
+2024-08-22 01:00:54.845 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/sieupham/email-notification" - amq.ctag-iBRfgsi1W2dkwvLK7IrjvQ
+2024-08-22 01:00:54.846 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/sms-notification"
+2024-08-22 01:00:54.846 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/email-notification"
+2024-08-22 01:00:54.848 +07:00 [INF] Bus started: "rabbitmq://localhost/sieupham"
+2024-08-22 01:03:36.036 +07:00 [DBG] Stopping bus instances: IBus
+2024-08-22 01:03:36.042 +07:00 [DBG] Stopping bus: "rabbitmq://localhost/sieupham"
+2024-08-22 01:03:36.049 +07:00 [DBG] Endpoint Stopping: "rabbitmq://localhost/sieupham/email-notification"
+2024-08-22 01:03:36.054 +07:00 [DBG] Consumer Stopping: "rabbitmq://localhost/sieupham/email-notification" (Stop Receive Transport)
+2024-08-22 01:03:36.071 +07:00 [DBG] Consumer Cancel Ok: "rabbitmq://localhost/sieupham/email-notification" - amq.ctag-iBRfgsi1W2dkwvLK7IrjvQ
+2024-08-22 01:03:36.074 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/email-notification"
+2024-08-22 01:03:36.081 +07:00 [DBG] Endpoint Stopping: "rabbitmq://localhost/sieupham/sms-notification"
+2024-08-22 01:03:36.082 +07:00 [DBG] Consumer Stopping: "rabbitmq://localhost/sieupham/sms-notification" (Stop Receive Transport)
+2024-08-22 01:03:36.087 +07:00 [DBG] Consumer Cancel Ok: "rabbitmq://localhost/sieupham/sms-notification" - amq.ctag-evOLhCZ3cuXn29kSdXhnGQ
+2024-08-22 01:03:36.087 +07:00 [DBG] Consumer Completed: "rabbitmq://localhost/sieupham/email-notification": 0 received, 0 concurrent, amq.ctag-iBRfgsi1W2dkwvLK7IrjvQ
+2024-08-22 01:03:36.088 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/sms-notification"
+2024-08-22 01:03:36.088 +07:00 [DBG] Consumer Completed: "rabbitmq://localhost/sieupham/sms-notification": 0 received, 0 concurrent, amq.ctag-evOLhCZ3cuXn29kSdXhnGQ
+2024-08-22 01:03:36.104 +07:00 [DBG] Endpoint Stopping: "rabbitmq://localhost/sieupham/192_MasstransitRabbitMQConsumerAPI_bus_53byyyyejqbpexesbdqcrn3udc?temporary=true"
+2024-08-22 01:03:36.105 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/192_MasstransitRabbitMQConsumerAPI_bus_53byyyyejqbpexesbdqcrn3udc?temporary=true"
+2024-08-22 01:03:36.112 +07:00 [DBG] Disconnect: guest@localhost:5672/sieupham
+2024-08-22 01:03:36.119 +07:00 [DBG] Disconnected: guest@localhost:5672/sieupham
+2024-08-22 01:03:36.121 +07:00 [INF] Bus stopped: "rabbitmq://localhost/sieupham"
+2024-08-22 01:03:36.128 +07:00 [INF] Stopped cleanly

@@ -4,7 +4,7 @@ namespace MasstransitRabbitMQ.Contract.Abstractions.IntegrationEvents;
 
 public static class DomainEvent
 {
-    public record EmailNotificationEvent() : INotificationEvent
+    public record EmailNotification() : INotification
     {
         public Guid Id { get; set; }
         public DateTimeOffset TimeStamp { get; set; }
@@ -14,7 +14,7 @@ public static class DomainEvent
         public Guid TransactionId { get; set; }
     }
     
-    public record SmsNotificationEvent() : INotificationEvent
+    public record SmsNotification() : INotification
     {
         public Guid Id { get; set; }
         public DateTimeOffset TimeStamp { get; set; }
@@ -24,7 +24,7 @@ public static class DomainEvent
         public Guid TransactionId { get; set; }
     }
     
-    public record NotificationEvent() : INotificationEvent
+    public record NotificationEvent() : INotification
     {
         public Guid Id { get; set; }
         public DateTimeOffset TimeStamp { get; set; }

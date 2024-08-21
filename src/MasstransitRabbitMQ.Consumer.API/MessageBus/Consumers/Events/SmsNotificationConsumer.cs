@@ -4,7 +4,7 @@ using MediatR;
 
 namespace MasstransitRabbitMQ.Consumer.API.MessageBus.Consumers.Events;
 
-public class SendSmsWhenReceivedSmsEventConsumer(ISender _sender) : Consumer<DomainEvent.SmsNotificationEvent>(_sender)
+public class SmsNotificationConsumer(ISender _sender) : Consumer<DomainEvent.SmsNotification>(_sender)
 {
 
 }

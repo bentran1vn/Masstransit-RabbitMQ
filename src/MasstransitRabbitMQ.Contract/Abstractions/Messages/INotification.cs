@@ -3,7 +3,7 @@ using MassTransit;
 namespace MasstransitRabbitMQ.Contract.Abstractions.Messages;
 
 [ExcludeFromTopology]
-public interface INotificationEvent : IMessage
+public interface INotification : IMessage
 {
     public string Name { get; set; }
     public string Description { get; set; }

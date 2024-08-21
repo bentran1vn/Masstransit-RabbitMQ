@@ -27,9 +27,4 @@
       <ProjectReference Include="..\MasstransitRabbitMQ.Contract\MasstransitRabbitMQ.Contract.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="MessageBus\Consumers\Commands\" />
-      <Folder Include="UseCases\Commands\" />
-    </ItemGroup>
-
 </Project>
