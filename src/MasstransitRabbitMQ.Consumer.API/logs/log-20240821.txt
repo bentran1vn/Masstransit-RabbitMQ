@@ -1,0 +1,29 @@
+2024-08-21 03:28:36.136 +07:00 [INF] Configured endpoint SendSmsWhenReceivedSmsEvent, Consumer: MasstransitRabbitMQ.Consumer.API.MessageBus.Consumers.Events.SendSmsWhenReceivedSmsEventConsumer
+2024-08-21 03:28:36.266 +07:00 [DBG] Starting bus instances: IBus
+2024-08-21 03:28:36.270 +07:00 [DBG] Starting bus: "rabbitmq://localhost/sieupham"
+2024-08-21 03:28:36.304 +07:00 [DBG] Connect: guest@localhost:5672/sieupham
+2024-08-21 03:28:36.349 +07:00 [DBG] Connected: guest@localhost:5672/sieupham (address: amqp://localhost:5672, local: 60314)
+2024-08-21 03:28:36.366 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/192_MasstransitRabbitMQConsumerAPI_bus_ng9oyyyejqbpei8hbdqcniimym?temporary=true"
+2024-08-21 03:28:36.388 +07:00 [DBG] Declare queue: name: SendSmsWhenReceivedSmsEvent, durable, consumer-count: 0 message-count: 0
+2024-08-21 03:28:36.401 +07:00 [DBG] Declare exchange: name: SendSmsWhenReceivedSmsEvent, type: fanout, durable
+2024-08-21 03:28:36.406 +07:00 [DBG] Declare exchange: name: MasstransitRabbitMQ.Contract.Abstractions.IntegrationEvents:DomainEvent-SmsNotificationEvent, type: fanout, durable
+2024-08-21 03:28:36.409 +07:00 [DBG] Bind queue: source: SendSmsWhenReceivedSmsEvent, destination: SendSmsWhenReceivedSmsEvent
+2024-08-21 03:28:36.445 +07:00 [DBG] Bind exchange: source: MasstransitRabbitMQ.Contract.Abstractions.IntegrationEvents:DomainEvent-SmsNotificationEvent, destination: SendSmsWhenReceivedSmsEvent
+2024-08-21 03:28:36.472 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/sieupham/SendSmsWhenReceivedSmsEvent" - amq.ctag-UUOQebnKYHolToACo4VlPQ
+2024-08-21 03:28:36.473 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/sieupham/SendSmsWhenReceivedSmsEvent"
+2024-08-21 03:28:36.475 +07:00 [INF] Bus started: "rabbitmq://localhost/sieupham"
+2024-08-21 03:28:53.270 +07:00 [INF] Message Received: SmsNotificationEvent { Id = 54a04c44-1c81-4d0d-8f38-542ac757a339, TimeStamp = 1/1/0001 12:00:00 AM +00:00, Name = sms notification, Description = Sms description, Type = sms, TransactionId = f49c637a-8d3e-45b8-aedb-3b473783ac83 }
+2024-08-21 03:28:53.278 +07:00 [DBG] RECEIVE "rabbitmq://localhost/sieupham/SendSmsWhenReceivedSmsEvent" "fcbe0000-084b-82d4-1ca6-08dcc156b530" MasstransitRabbitMQ.Contract.Abstractions.IntegrationEvents.DomainEvent+SmsNotificationEvent MasstransitRabbitMQ.Consumer.API.MessageBus.Consumers.Events.SendSmsWhenReceivedSmsEventConsumer("00:00:00.0115305")
+2024-08-21 03:35:56.298 +07:00 [DBG] Stopping bus instances: IBus
+2024-08-21 03:35:56.308 +07:00 [DBG] Stopping bus: "rabbitmq://localhost/sieupham"
+2024-08-21 03:35:56.316 +07:00 [DBG] Endpoint Stopping: "rabbitmq://localhost/sieupham/SendSmsWhenReceivedSmsEvent"
+2024-08-21 03:35:56.321 +07:00 [DBG] Consumer Stopping: "rabbitmq://localhost/sieupham/SendSmsWhenReceivedSmsEvent" (Stop Receive Transport)
+2024-08-21 03:35:56.329 +07:00 [DBG] Consumer Cancel Ok: "rabbitmq://localhost/sieupham/SendSmsWhenReceivedSmsEvent" - amq.ctag-UUOQebnKYHolToACo4VlPQ
+2024-08-21 03:35:56.333 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/SendSmsWhenReceivedSmsEvent"
+2024-08-21 03:35:56.335 +07:00 [DBG] Consumer Completed: "rabbitmq://localhost/sieupham/SendSmsWhenReceivedSmsEvent": 1 received, 1 concurrent, amq.ctag-UUOQebnKYHolToACo4VlPQ
+2024-08-21 03:35:56.350 +07:00 [DBG] Endpoint Stopping: "rabbitmq://localhost/sieupham/192_MasstransitRabbitMQConsumerAPI_bus_ng9oyyyejqbpei8hbdqcniimym?temporary=true"
+2024-08-21 03:35:56.352 +07:00 [DBG] Endpoint Completed: "rabbitmq://localhost/sieupham/192_MasstransitRabbitMQConsumerAPI_bus_ng9oyyyejqbpei8hbdqcniimym?temporary=true"
+2024-08-21 03:35:56.354 +07:00 [DBG] Disconnect: guest@localhost:5672/sieupham
+2024-08-21 03:35:56.358 +07:00 [DBG] Disconnected: guest@localhost:5672/sieupham
+2024-08-21 03:35:56.359 +07:00 [INF] Bus stopped: "rabbitmq://localhost/sieupham"
+2024-08-21 03:35:56.364 +07:00 [INF] Stopped cleanly

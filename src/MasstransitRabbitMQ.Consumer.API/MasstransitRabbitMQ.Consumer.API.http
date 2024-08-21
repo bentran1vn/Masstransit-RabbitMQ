@@ -1,0 +1,6 @@
+@MasstransitRabbitMQ.Consumer.API_HostAddress = http://localhost:5188
+
+GET {{MasstransitRabbitMQ.Consumer.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

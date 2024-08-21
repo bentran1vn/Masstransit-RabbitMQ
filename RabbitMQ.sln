@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2F17215D-1D29-445F-98E0-A4B0516B8E82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasstransitRabbitMQ.Contract", "src\MasstransitRabbitMQ.Contract\MasstransitRabbitMQ.Contract.csproj", "{680CDD3E-D162-4DF1-ADB5-BFF5D8A2D34F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasstransitRabbitMQ.Producer.API", "src\MasstransitRabbitMQ.Producer.API\MasstransitRabbitMQ.Producer.API.csproj", "{8E47F363-A3F3-4E71-9537-81E48C131047}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasstransitRabbitMQ.Consumer.API", "src\MasstransitRabbitMQ.Consumer.API\MasstransitRabbitMQ.Consumer.API.csproj", "{E57CDAB0-098E-4F0C-BAC1-EBF1BDCCC221}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{680CDD3E-D162-4DF1-ADB5-BFF5D8A2D34F} = {2F17215D-1D29-445F-98E0-A4B0516B8E82}
+		{8E47F363-A3F3-4E71-9537-81E48C131047} = {2F17215D-1D29-445F-98E0-A4B0516B8E82}
+		{E57CDAB0-098E-4F0C-BAC1-EBF1BDCCC221} = {2F17215D-1D29-445F-98E0-A4B0516B8E82}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{680CDD3E-D162-4DF1-ADB5-BFF5D8A2D34F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680CDD3E-D162-4DF1-ADB5-BFF5D8A2D34F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680CDD3E-D162-4DF1-ADB5-BFF5D8A2D34F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680CDD3E-D162-4DF1-ADB5-BFF5D8A2D34F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E47F363-A3F3-4E71-9537-81E48C131047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E47F363-A3F3-4E71-9537-81E48C131047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E47F363-A3F3-4E71-9537-81E48C131047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E47F363-A3F3-4E71-9537-81E48C131047}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E57CDAB0-098E-4F0C-BAC1-EBF1BDCCC221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E57CDAB0-098E-4F0C-BAC1-EBF1BDCCC221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E57CDAB0-098E-4F0C-BAC1-EBF1BDCCC221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E57CDAB0-098E-4F0C-BAC1-EBF1BDCCC221}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
