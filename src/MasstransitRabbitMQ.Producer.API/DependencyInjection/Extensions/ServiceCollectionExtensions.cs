@@ -1,5 +1,8 @@
 using MassTransit;
+using MasstransitRabbitMQ.Contract.Abstractions.IntegrationEvents;
+using MasstransitRabbitMQ.Contract.Abstractions.Messages;
 using MasstransitRabbitMQ.Producer.API.DependencyInjection.Options;
+using RabbitMQ.Client;
 
 namespace MasstransitRabbitMQ.Producer.API.DependencyInjection.Extensions;
 
@@ -18,6 +21,21 @@ public static class ServiceCollectionExtensions
                 {
                     h.Username(masstransitConfiguration.UserName);
                     h.Password(masstransitConfiguration.Password);
+                });
+                
+                bus.Message<INotification>( e => e.SetEntityName(masstransitConfiguration.ExchangeName) );
+                
+                bus.Publish<INotification>(e =>
+                {
+                    e.Durable = true;
+                    e.AutoDelete = false;
+                    e.ExchangeType = ExchangeType.Topic;
+                });
+                
+                bus.Send<INotification>(e =>
+                {
+                    // Use type field of message for routing key: sms | email
+                    e.UseRoutingKeyFormatter(context => context.Message.Type.ToString());
                 });
                 
                 // Rename for Root Exchange and setup for consumer also

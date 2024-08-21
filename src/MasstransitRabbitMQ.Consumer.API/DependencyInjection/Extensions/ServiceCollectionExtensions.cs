@@ -1,7 +1,9 @@
 using System.Reflection;
 using MassTransit;
 using MasstransitRabbitMQ.Consumer.API.MessageBus.Consumers.Events;
+using MasstransitRabbitMQ.Contract.Abstractions.IntegrationEvents.Enumerations;
 using MasstransitRabbitMQ.Producer.API.DependencyInjection.Options;
+using RabbitMQ.Client;
 
 namespace MasstransitRabbitMQ.Producer.API.DependencyInjection.Extensions;
 
@@ -40,6 +42,38 @@ public static class ServiceCollectionExtensions
                 {
                     h.Username(masstransitConfiguration.UserName);
                     h.Password(masstransitConfiguration.Password);
+                });
+                
+                bus.ReceiveEndpoint(masstransitConfiguration.SmsQueueName, re =>
+                {
+                    re.ConfigureConsumeTopology = false; // Khong tu tao ra queue
+                    re.ConfigureConsumer<SmsNotificationConsumer>(context);
+                    
+                    re.Bind(masstransitConfiguration.ExchangeName, e =>
+                    {
+                        {
+                            e.Durable = true;
+                            e.AutoDelete = false;
+                            e.RoutingKey = NotificationType.sms;
+                            e.ExchangeType = ExchangeType.Topic;
+                        }
+                    });
+                });
+                
+                bus.ReceiveEndpoint(masstransitConfiguration.EmailQueueName, re =>
+                {
+                    re.ConfigureConsumeTopology = false; // Khong tu tao ra queue
+                    re.ConfigureConsumer<EmailNotificationConsumer>(context);
+                    
+                    re.Bind(masstransitConfiguration.ExchangeName, e =>
+                    {
+                        {
+                            e.Durable = true;
+                            e.AutoDelete = false;
+                            e.RoutingKey = NotificationType.email;
+                            e.ExchangeType = ExchangeType.Topic;
+                        }
+                    });
                 });
                 
                 // Rename for Root Exchange and setup for consumer also
